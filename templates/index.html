@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open in New Tab</title>
+</head>
+<body>
+    <button id="openTabBtn">Open Link in New Tab</button>
+
+    <script>
+        document.getElementById("openTabBtn").addEventListener("click", function() {
+            fetch("/hit_url")
+                .then(response => response.text())
+                .then(data => {
+                    window.open(data, "_blank");
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
