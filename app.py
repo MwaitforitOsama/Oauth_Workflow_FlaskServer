@@ -28,6 +28,7 @@ def index():
 @app.route('/receive')
 def receive_json():
     if request.method == 'POST' or 'GET':
+        print(request.json())
         try:
             # Get JSON data from the request
             json_data = request.get_json()
