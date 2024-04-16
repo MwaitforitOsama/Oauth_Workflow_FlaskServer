@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 CLIENT_ID = "O3rIybaWYTNkqrYGbZMMsCgypBaaWjQ14z3odCLbSEc"
 CLIENT_SECRET = "your_client_secret"
-REDIRECT_URI = "https://89cc-39-42-138-20.ngrok-free.app"  # Remove leading/trailing spaces
+REDIRECT_URI = "https://89cc-39-42-138-20.ngrok-free.app/receive"  # Remove leading/trailing spaces
 
 
 def get_auth_url():
